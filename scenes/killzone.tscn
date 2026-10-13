@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://bd8jndlsvkcij"]
+
+[ext_resource type="Script" uid="uid://cu4m3bemb2mh1" path="res://scenes/killed.gd" id="1_xlapc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_csqde"]
+
+[node name="KILLZONE" type="Area2D" unique_id=689715833]
+script = ExtResource("1_xlapc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1878399748]
+shape = SubResource("RectangleShape2D_csqde")
+
+[connection signal="area_shape_entered" from="." to="." method="_on_area_shape_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

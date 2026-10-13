@@ -1,0 +1,102 @@
+[gd_scene format=3 uid="uid://dx88j48ioml30"]
+
+[ext_resource type="Script" uid="uid://bsnbyo2gmtx7m" path="res://path_follow_2d.gd" id="1_ns8uk"]
+[ext_resource type="PackedScene" uid="uid://bd8jndlsvkcij" path="res://scenes/killzone.tscn" id="2_nqic3"]
+[ext_resource type="Texture2D" uid="uid://ds8nuvu5kax" path="res://assets/Traps/Saw/On (38x38).png" id="3_30n6l"]
+
+[sub_resource type="Curve2D" id="Curve2D_f877d"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 418, 58, 0, 0, 0, 0, 554, 58, 0, 0, 0, 0, 552, -4, 0, 0, 0, 0, 418, -6, 0, 0, 0, 0, 418, 56)
+}
+point_count = 5
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ns8uk"]
+radius = 19.026299
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uqtn8"]
+atlas = ExtResource("3_30n6l")
+region = Rect2(0, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yy5lm"]
+atlas = ExtResource("3_30n6l")
+region = Rect2(38, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6hin5"]
+atlas = ExtResource("3_30n6l")
+region = Rect2(76, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0n84m"]
+atlas = ExtResource("3_30n6l")
+region = Rect2(114, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dgkta"]
+atlas = ExtResource("3_30n6l")
+region = Rect2(152, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xdo2w"]
+atlas = ExtResource("3_30n6l")
+region = Rect2(190, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0qdtw"]
+atlas = ExtResource("3_30n6l")
+region = Rect2(228, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gkuf2"]
+atlas = ExtResource("3_30n6l")
+region = Rect2(266, 0, 38, 38)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qr5sa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uqtn8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yy5lm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6hin5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0n84m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dgkta")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xdo2w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0qdtw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gkuf2")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 24.0
+}]
+
+[node name="MOVING SAW" type="Path2D" unique_id=243506169]
+curve = SubResource("Curve2D_f877d")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="." unique_id=775120178]
+position = Vector2(418, 58)
+loop = false
+script = ExtResource("1_ns8uk")
+
+[node name="AnimatableBody2D" type="Area2D" parent="PathFollow2D" unique_id=1826485996]
+
+[node name="KILLZONE" parent="PathFollow2D/AnimatableBody2D" unique_id=689715833 instance=ExtResource("2_nqic3")]
+position = Vector2(44, 2)
+
+[node name="CollisionShape2D" parent="PathFollow2D/AnimatableBody2D/KILLZONE" index="0" unique_id=1878399748]
+position = Vector2(-44, -2)
+shape = SubResource("CircleShape2D_ns8uk")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="PathFollow2D/AnimatableBody2D" unique_id=1954213038]
+sprite_frames = SubResource("SpriteFrames_qr5sa")
+autoplay = "default"
+frame_progress = 0.4742116
+
+[editable path="PathFollow2D/AnimatableBody2D/KILLZONE"]
