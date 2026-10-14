@@ -1,6 +1,62 @@
 [gd_scene format=3 uid="uid://dy0hggfc0hx42"]
 
 [ext_resource type="Script" uid="uid://bjqy08wkxrn6" path="res://scenes/collectables.gd" id="1_xf80n"]
+[ext_resource type="Texture2D" uid="uid://bjvt211ak28qs" path="res://assets/Items/Fruits/Collected.png" id="2_n6gme"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xxofk"]
+atlas = ExtResource("2_n6gme")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t7gpa"]
+atlas = ExtResource("2_n6gme")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gguo1"]
+atlas = ExtResource("2_n6gme")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_klqdr"]
+atlas = ExtResource("2_n6gme")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_voxl4"]
+atlas = ExtResource("2_n6gme")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u0y0b"]
+atlas = ExtResource("2_n6gme")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_afmmk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xxofk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t7gpa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gguo1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_klqdr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_voxl4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u0y0b")
+}],
+"loop": 0,
+"name": &"collected",
+"speed": 20.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"default",
+"speed": 20.0
+}]
 
 [node name="Collectables" type="Area2D" unique_id=1202717980]
 script = ExtResource("1_xf80n")
@@ -8,5 +64,6 @@ script = ExtResource("1_xf80n")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2065168339]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1671006630]
+sprite_frames = SubResource("SpriteFrames_afmmk")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
