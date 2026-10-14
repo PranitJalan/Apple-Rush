@@ -74,7 +74,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"default",
-"speed": 24.0
+"speed": 20.0
 }]
 
 [node name="MOVING SAW" type="Path2D" unique_id=243506169]

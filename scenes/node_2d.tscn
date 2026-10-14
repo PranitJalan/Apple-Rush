@@ -3,6 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://durebf30dtjkk" path="res://assets/Terrain/Terrain (16x16).png" id="1_6e84v"]
 [ext_resource type="PackedScene" uid="uid://c1y7j6cniairk" path="res://scenes/character_body_2d.tscn" id="2_4dvvg"]
 [ext_resource type="PackedScene" uid="uid://dx88j48ioml30" path="res://scenes/moving_saw.tscn" id="3_rnjyy"]
+[ext_resource type="PackedScene" uid="uid://bm42kaiyfa252" path="res://scenes/Apples.tscn" id="4_4vge2"]
+[ext_resource type="PackedScene" uid="uid://c7qxyj7hp30j1" path="res://scenes/trampoline.tscn" id="5_04qyp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4dvvg"]
 texture = ExtResource("1_6e84v")
@@ -206,12 +208,24 @@ tile_set = SubResource("TileSet_yv1b8")
 [node name="Player" parent="." unique_id=1810582521 instance=ExtResource("2_4dvvg")]
 position = Vector2(616, -178)
 
-[node name="MOVING SAW" parent="." unique_id=243506169 instance=ExtResource("3_rnjyy")]
+[node name="Obstacles" type="Node2D" parent="." unique_id=314874114]
+
+[node name="MOVING SAW" parent="Obstacles" unique_id=243506169 instance=ExtResource("3_rnjyy")]
 z_index = -2
 position = Vector2(4, 4)
 
-[node name="PathFollow2D" parent="MOVING SAW" index="0" unique_id=775120178]
+[node name="PathFollow2D" parent="Obstacles/MOVING SAW" index="0" unique_id=775120178]
 is_looping = true
 
-[editable path="MOVING SAW"]
-[editable path="MOVING SAW/PathFollow2D/AnimatableBody2D/KILLZONE"]
+[node name="Collect" type="Node2D" parent="." unique_id=1996372634]
+position = Vector2(829, 50)
+
+[node name="Collectables" parent="Collect" unique_id=1202717980 instance=ExtResource("4_4vge2")]
+
+[node name="Helpers" type="Node2D" parent="." unique_id=2100360513]
+
+[node name="Trampoline" parent="Helpers" unique_id=536661577 instance=ExtResource("5_04qyp")]
+position = Vector2(888, 51)
+
+[editable path="Obstacles/MOVING SAW"]
+[editable path="Obstacles/MOVING SAW/PathFollow2D/AnimatableBody2D/KILLZONE"]
