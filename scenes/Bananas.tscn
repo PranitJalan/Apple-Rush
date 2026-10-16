@@ -183,7 +183,7 @@ animations = [{
 }]
 
 [node name="Collectables" unique_id=1202717980 instance=ExtResource("1_4ur6f")]
-god = "bananas"
+fruit = "bananas"
 
 [node name="CollisionShape2D" parent="." index="0" unique_id=2065168339]
 shape = SubResource("CapsuleShape2D_ciu7r")

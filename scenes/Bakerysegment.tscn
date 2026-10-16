@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://s2twyyx8k8sx"]
+
+[ext_resource type="FontFile" uid="uid://c253tsfxn4ssc" path="res://assets/Menu/Text/Text (Black) (8x10).png" id="1_kpion"]
+[ext_resource type="Texture2D" uid="uid://tpcyk46g32xm" path="res://assets/Items/Fruits/Bananas.png" id="2_hh61w"]
+[ext_resource type="FontFile" uid="uid://baikchor1qwqa" path="res://assets/Menu/Text/Text (White) (8x10).png" id="3_c6m5a"]
+[ext_resource type="Script" uid="uid://duu1hnjpa1cly" path="res://scenes/button.gd" id="4_hh61w"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tjt3e"]
+atlas = ExtResource("2_hh61w")
+region = Rect2(9, 6, 14, 16)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_67t3p"]
+content_margin_bottom = 10.0
+bg_color = Color(0.9304324, 0.44062516, 0.06241321, 1)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gcfwf"]
+content_margin_bottom = 10.0
+bg_color = Color(0.27798516, 0.11023467, 0.0018772075, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_afdg7"]
+content_margin_bottom = 10.0
+bg_color = Color(0.5289716, 0.23682326, 0.006963605, 1)
+
+[node name="banana" type="HBoxContainer" unique_id=1088626059]
+
+[node name="Label" type="Label" parent="." unique_id=213506511]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_kpion")
+theme_override_font_sizes/font_size = 32
+text = " 98X"
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1573855635]
+texture_filter = 1
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = SubResource("AtlasTexture_tjt3e")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label2" type="Label" parent="." unique_id=329322615]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_kpion")
+theme_override_font_sizes/font_size = 32
+text = ".."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="." unique_id=1368318616]
+layout_mode = 2
+theme_override_colors/font_color = Color(15.370708, 16.215857, 18.892157, 1)
+theme_override_fonts/font = ExtResource("3_c6m5a")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_67t3p")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gcfwf")
+theme_override_styles/hover = SubResource("StyleBoxFlat_afdg7")
+text = " BAKE "
+script = ExtResource("4_hh61w")
+cost = 15
+fruit = "bananas"
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

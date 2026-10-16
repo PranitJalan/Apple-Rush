@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://ds4a32vpdnupm"]
+
+[ext_resource type="Texture2D" uid="uid://f1l8223m55wr" path="res://assets/Menu/Buttons/Close.png" id="1_a4mvy"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t611x"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fte2d"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6m2tp"]
+content_margin_left = 2.0
+content_margin_top = 2.0
+content_margin_right = 2.0
+content_margin_bottom = 2.0
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_color = Color(0.8, 0.8, 0, 1)
+
+[sub_resource type="GDScript" id="GDScript_xlci6"]
+script/source = "extends Button
+
+
+
+
+func _on_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://scenes/control.tscn\")
+"
+
+[node name="Button" type="Button" unique_id=832941648]
+offset_right = 72.5
+offset_bottom = 65.5
+theme_override_icons/icon = ExtResource("1_a4mvy")
+theme_override_styles/normal = SubResource("StyleBoxFlat_t611x")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_fte2d")
+theme_override_styles/hover = SubResource("StyleBoxFlat_6m2tp")
+icon = ExtResource("1_a4mvy")
+icon_alignment = 1
+expand_icon = true
+script = SubResource("GDScript_xlci6")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

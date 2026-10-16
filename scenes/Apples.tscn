@@ -182,7 +182,7 @@ animations = [{
 }]
 
 [node name="Collectables" unique_id=1202717980 instance=ExtResource("1_rywt4")]
-god = "apples"
+fruit = "apples"
 
 [node name="CollisionShape2D" parent="." index="0" unique_id=2065168339]
 shape = SubResource("CircleShape2D_n6gme")
