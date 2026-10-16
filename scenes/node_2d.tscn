@@ -298,126 +298,6 @@ limit_left = 0
 
 [node name="Obstacles" type="Node2D" parent="." unique_id=314874114]
 
-[node name="Collect" type="Node2D" parent="." unique_id=1996372634]
-position = Vector2(829, 50)
-
-[node name="Collectables" parent="Collect" unique_id=1202717980 instance=ExtResource("4_4vge2")]
-position = Vector2(-662, -7)
-
-[node name="Collectables2" parent="Collect" unique_id=242420602 instance=ExtResource("5_j7wrs")]
-position = Vector2(-627, -8)
-
-[node name="Collectables4" parent="Collect" unique_id=1652136259 instance=ExtResource("4_4vge2")]
-position = Vector2(-775, -24)
-
-[node name="Collectables3" parent="Collect" unique_id=2018135723 instance=ExtResource("4_4vge2")]
-position = Vector2(-796, -21)
-
-[node name="Collectables5" parent="Collect" unique_id=2014488547 instance=ExtResource("4_4vge2")]
-position = Vector2(-752, -9)
-
-[node name="Collectables6" parent="Collect" unique_id=453422019 instance=ExtResource("4_4vge2")]
-position = Vector2(-780, 1)
-
-[node name="Collectables7" parent="Collect" unique_id=650516216 instance=ExtResource("4_4vge2")]
-position = Vector2(-796, 13)
-
-[node name="Collectables8" parent="Collect" unique_id=1627279713 instance=ExtResource("4_4vge2")]
-position = Vector2(-805, -4)
-
-[node name="Collectables9" parent="Collect" unique_id=271561157 instance=ExtResource("4_4vge2")]
-position = Vector2(-787, -39)
-
-[node name="Collectables10" parent="Collect" unique_id=872879364 instance=ExtResource("4_4vge2")]
-position = Vector2(-754, -27)
-
-[node name="Collectables11" parent="Collect" unique_id=658957365 instance=ExtResource("4_4vge2")]
-position = Vector2(-779, -18)
-
-[node name="Collectables12" parent="Collect" unique_id=1492860764 instance=ExtResource("4_4vge2")]
-position = Vector2(-796, -1)
-
-[node name="Collectables13" parent="Collect" unique_id=1562157743 instance=ExtResource("4_4vge2")]
-position = Vector2(-777, 1)
-
-[node name="Collectables14" parent="Collect" unique_id=583541957 instance=ExtResource("4_4vge2")]
-position = Vector2(-799, 17)
-
-[node name="Collectables15" parent="Collect" unique_id=2082098511 instance=ExtResource("4_4vge2")]
-position = Vector2(-816, 6)
-
-[node name="Collectables16" parent="Collect" unique_id=1662230034 instance=ExtResource("4_4vge2")]
-position = Vector2(-770, 9)
-
-[node name="Collectables17" parent="Collect" unique_id=1129649312 instance=ExtResource("4_4vge2")]
-position = Vector2(-784, -1)
-
-[node name="Collectables18" parent="Collect" unique_id=1615961855 instance=ExtResource("4_4vge2")]
-position = Vector2(-800, 23)
-
-[node name="Collectables19" parent="Collect" unique_id=982371485 instance=ExtResource("4_4vge2")]
-position = Vector2(-754, 0)
-
-[node name="Collectables20" parent="Collect" unique_id=1397850061 instance=ExtResource("4_4vge2")]
-position = Vector2(-810, -4)
-
-[node name="Collectables21" parent="Collect" unique_id=1601122333 instance=ExtResource("4_4vge2")]
-position = Vector2(-791, -4)
-
-[node name="Collectables22" parent="Collect" unique_id=1224383804 instance=ExtResource("4_4vge2")]
-position = Vector2(-785, 7)
-
-[node name="Collectables23" parent="Collect" unique_id=2005314463 instance=ExtResource("4_4vge2")]
-position = Vector2(-774, 15)
-
-[node name="Collectables24" parent="Collect" unique_id=690269281 instance=ExtResource("4_4vge2")]
-position = Vector2(-805, 1)
-
-[node name="Collectables25" parent="Collect" unique_id=1051429923 instance=ExtResource("5_j7wrs")]
-position = Vector2(-772, -10)
-
-[node name="Collectables26" parent="Collect" unique_id=1995060895 instance=ExtResource("5_j7wrs")]
-position = Vector2(-756, -10)
-
-[node name="Collectables27" parent="Collect" unique_id=1615507432 instance=ExtResource("5_j7wrs")]
-position = Vector2(-783, -3)
-
-[node name="Collectables28" parent="Collect" unique_id=2026947025 instance=ExtResource("5_j7wrs")]
-position = Vector2(-799, -20)
-
-[node name="Collectables29" parent="Collect" unique_id=314174777 instance=ExtResource("5_j7wrs")]
-position = Vector2(-778, -1)
-
-[node name="Collectables30" parent="Collect" unique_id=14634318 instance=ExtResource("5_j7wrs")]
-position = Vector2(-801, -2)
-
-[node name="Collectables31" parent="Collect" unique_id=1340229101 instance=ExtResource("5_j7wrs")]
-position = Vector2(-802, -6)
-
-[node name="Collectables32" parent="Collect" unique_id=1718694279 instance=ExtResource("5_j7wrs")]
-position = Vector2(-803, -6)
-
-[node name="Collectables33" parent="Collect" unique_id=1036922859 instance=ExtResource("5_j7wrs")]
-position = Vector2(-760, -6)
-
-[node name="Collectables34" parent="Collect" unique_id=1013263028 instance=ExtResource("5_j7wrs")]
-position = Vector2(-780, 17)
-
-[node name="Collectables35" parent="Collect" unique_id=345627995 instance=ExtResource("5_j7wrs")]
-position = Vector2(-785, -21)
-
-[node name="Collectables36" parent="Collect" unique_id=151186734 instance=ExtResource("5_j7wrs")]
-position = Vector2(-792, 15)
-
-[node name="Collectables37" parent="Collect" unique_id=906953435 instance=ExtResource("5_j7wrs")]
-position = Vector2(-760, -16)
-
-[node name="Collectables38" parent="Collect" unique_id=799987413 instance=ExtResource("5_j7wrs")]
-position = Vector2(-790, 8)
-
-[node name="Collectables39" parent="Collect" unique_id=143297212 instance=ExtResource("5_j7wrs")]
-position = Vector2(-796, 21)
-
 [node name="Helpers" type="Node2D" parent="." unique_id=2100360513]
 
 [node name="Trampoline" parent="Helpers" unique_id=536661577 instance=ExtResource("5_04qyp")]
@@ -425,8 +305,8 @@ position = Vector2(221, 66)
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=1295590111]
 scroll_offset = Vector2(4, -3)
-repeat_size = Vector2(384, 0)
-autoscroll = Vector2(50, 0)
+repeat_size = Vector2(384, 256)
+autoscroll = Vector2(50, -50)
 repeat_times = 4
 
 [node name="TileMapLayer3" type="TileMapLayer" parent="Parallax2D" unique_id=967517086]
@@ -441,5 +321,19 @@ z_index = 100
 offset_right = 108.0
 offset_bottom = 79.0
 offset_transform_enabled = true
+
+[node name="Collect" type="Node2D" parent="." unique_id=2065714060]
+
+[node name="Collectables" parent="Collect" unique_id=1202717980 instance=ExtResource("4_4vge2")]
+position = Vector2(120, 48)
+
+[node name="Collectables2" parent="Collect" unique_id=83719555 instance=ExtResource("4_4vge2")]
+position = Vector2(92, 48)
+
+[node name="Collectables3" parent="Collect" unique_id=768593709 instance=ExtResource("5_j7wrs")]
+position = Vector2(18, 49)
+
+[node name="Collectables4" parent="Collect" unique_id=1924849442 instance=ExtResource("4_4vge2")]
+position = Vector2(52, 46)
 
 [editable path="Player"]
