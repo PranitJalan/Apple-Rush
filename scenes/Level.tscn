@@ -7,6 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://bt7e1vm6oexmv" path="res://scenes/Bananas.tscn" id="5_j7wrs"]
 [ext_resource type="Texture2D" uid="uid://b6b48pq3o62hd" path="res://assets/Background/Blue.png" id="7_fws66"]
 [ext_resource type="PackedScene" uid="uid://ds4a32vpdnupm" path="res://scenes/Exit Button.tscn" id="7_hh0fu"]
+[ext_resource type="PackedScene" uid="uid://bj6gix3b4y34w" path="res://scenes/Oranges.tscn" id="8_hh0fu"]
+[ext_resource type="PackedScene" uid="uid://dynopt5j2kyg8" path="res://scenes/Cherries.tscn" id="9_3m5ht"]
+[ext_resource type="PackedScene" uid="uid://l0f5e8baanep" path="res://scenes/Strawberries.tscn" id="10_r4lgl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fws66"]
 texture = ExtResource("1_j7wrs")
@@ -335,5 +338,14 @@ position = Vector2(18, 49)
 
 [node name="Collectables4" parent="Collect" unique_id=1924849442 instance=ExtResource("4_4vge2")]
 position = Vector2(52, 46)
+
+[node name="Collectables" parent="." unique_id=924851338 instance=ExtResource("8_hh0fu")]
+position = Vector2(105, 66)
+
+[node name="Collectables2" parent="." unique_id=1409110836 instance=ExtResource("9_3m5ht")]
+position = Vector2(122, 67)
+
+[node name="Collectables3" parent="." unique_id=127004412 instance=ExtResource("10_r4lgl")]
+position = Vector2(15, 65)
 
 [editable path="Player"]

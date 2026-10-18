@@ -12,7 +12,13 @@ func _process(delta: float) -> void:
 	else:
 		disabled = false
 
-
+func _ready() -> void:
+	var total = cost*EVENT.current_pie
+	label.text = "" + str(total) + "X"
+	if total > EVENT[fruit]:
+		disabled = true
+	else:
+		disabled = false
 
 
 
