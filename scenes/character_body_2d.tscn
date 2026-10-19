@@ -264,7 +264,7 @@ z_index = 7
 position = Vector2(3.8146973e-06, 0.62499523)
 scale = Vector2(2.4999995, 2.7734375)
 sprite_frames = SubResource("SpriteFrames_qr5sa")
-animation = &"run"
+animation = &"death"
 autoplay = "run"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=793839105]

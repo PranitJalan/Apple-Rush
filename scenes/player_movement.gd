@@ -17,8 +17,8 @@ func _physics_process(delta: float) -> void:
 	get_input()
 	if not locked:
 		play()
-	set_movement(delta)
-	move_and_slide()
+		set_movement(delta)
+		move_and_slide()
 func play():
 	if direction:
 		sprite_2d.play("run")
@@ -55,11 +55,13 @@ func _ready():
 	EVENT._player_died.connect(on_player_died)
 	EVENT._tram.connect(trampoline)
 	sprite_2d.animation_finished.connect(_on_finish)
+	position = EVENT.spawn_position
 func on_player_died():
 		sprite_2d.play_backwards("death")
 		locked = true
 func _on_finish():
 	if sprite_2d.animation == "death":
 		locked = false
+		position = EVENT.spawn_position
 func trampoline():
 	velocity.y -= 1000

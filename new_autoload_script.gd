@@ -11,5 +11,5 @@ var cherries := 0
 var strawberries := 0
 var current_pie := 0
 var pies := 0
-
+var spawn_position := Vector2(50, 60)
 var collected: Array = []

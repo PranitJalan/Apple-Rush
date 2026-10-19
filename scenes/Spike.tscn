@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://cndbly0v7v606"]
+
+[ext_resource type="PackedScene" uid="uid://bd8jndlsvkcij" path="res://scenes/killzone.tscn" id="1_uiy7f"]
+[ext_resource type="Texture2D" uid="uid://onhw5dofb1f6" path="res://assets/Traps/Spikes/Idle.png" id="2_alo23"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_of6hh"]
+size = Vector2(7, 7)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_awuv7"]
+atlas = ExtResource("2_alo23")
+region = Rect2(0, 8, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n07ux"]
+atlas = ExtResource("2_alo23")
+region = Rect2(8, 8, 8, 8)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qr5sa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_awuv7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n07ux")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 20.0
+}]
+
+[node name="KILLZONE" unique_id=689715833 instance=ExtResource("1_uiy7f")]
+scale = Vector2(3, 3)
+
+[node name="CollisionShape2D" parent="." index="0" unique_id=1878399748]
+position = Vector2(-0.5, 0.5)
+shape = SubResource("RectangleShape2D_of6hh")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="1" unique_id=1336138541]
+sprite_frames = SubResource("SpriteFrames_qr5sa")
+frame_progress = 0.86805314
