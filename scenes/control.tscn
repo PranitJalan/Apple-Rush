@@ -1,33 +1,88 @@
-[gd_scene format=3 uid="uid://uq3ork7s2t5c"]
+[gd_scene format=4 uid="uid://uq3ork7s2t5c"]
 
-[sub_resource type="GDScript" id="GDScript_cr3o2"]
-script/source = "extends Button
+[ext_resource type="Texture2D" uid="uid://b6b48pq3o62hd" path="res://assets/Background/Blue.png" id="1_5p55f"]
+[ext_resource type="FontFile" uid="uid://c253tsfxn4ssc" path="res://assets/Menu/Text/Text (Black) (8x10).png" id="1_r67kn"]
 
+[sub_resource type="ViewportTexture" id="ViewportTexture_qr5sa"]
+viewport_path = NodePath("SubViewport")
 
-
-
-
-func _on_pressed() -> void:
-	get_tree().change_scene_to_file(\"res://scenes/Level.tscn\")
-"
-
-[sub_resource type="GDScript" id="GDScript_qr5sa"]
-script/source = "extends Button
+[sub_resource type="GDScript" id="GDScript_8n18e"]
+script/source = "extends MarginContainer
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	pivot_offset = size/2
+	scale = Vector2.ZERO
+	var tween = create_tween()
+	tween.tween_property(self, \"scale\", Vector2.ONE, 0.35)
+"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r67kn"]
+content_margin_bottom = 15.0
+bg_color = Color(0.94033027, 0.4408614, 3.85046e-07, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="GDScript" id="GDScript_r67kn"]
+script/source = "extends Button
+
+@onready var margin_container: MarginContainer = $\"../../../..\"
+
+func _on_pressed() -> void:
+	var tween = create_tween()
+	tween.tween_property(margin_container, \"scale\", Vector2.ZERO, 0.35)
+	await tween.finished
+	get_tree().change_scene_to_file(\"res://scenes/Level.tscn\")
+"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_brbbq"]
+content_margin_bottom = 15.0
+bg_color = Color(0.94033027, 0.4408614, 3.85046e-07, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="GDScript" id="GDScript_brbbq"]
+script/source = "extends Button
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+@onready var margin_container: MarginContainer = $\"../../../..\"
 
 
 func _on_pressed() -> void:
+	var tween = create_tween()
+	tween.tween_property(margin_container, \"scale\", Vector2.ZERO, 0.35)
+	await tween.finished
 	get_tree().change_scene_to_file(\"res://scenes/bakeryl.tscn\")
 "
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_r67kn"]
+texture = ExtResource("1_5p55f")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_brbbq"]
+tile_size = Vector2i(64, 64)
+sources/0 = SubResource("TileSetAtlasSource_r67kn")
 
 [node name="Control" type="Control" unique_id=1340829750]
 layout_mode = 3
@@ -37,21 +92,93 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Button" type="Button" parent="." unique_id=2102478755]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+[node name="TextureRect" type="TextureRect" parent="." unique_id=654047915]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -576.5
+offset_top = -325.5
+offset_right = 576.5
+offset_bottom = 325.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("ViewportTexture_qr5sa")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=763232906]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -317.0
+offset_top = -244.5
+offset_right = 317.0
+offset_bottom = 244.5
+grow_horizontal = 2
+grow_vertical = 2
+script = SubResource("GDScript_8n18e")
+
+[node name="HBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=430286064]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer" unique_id=1780433983]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_r67kn")
+theme_override_font_sizes/font_size = 72
+text = "PIE WARRIOR"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control" type="Control" parent="MarginContainer/HBoxContainer" unique_id=1721554207]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer" unique_id=997993416]
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+theme_override_constants/margin_left = 180
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 50
+
+[node name="HBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/MarginContainer" unique_id=1107452162]
+custom_minimum_size = Vector2(0, 150)
+custom_maximum_size = Vector2(250, -1)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer/HBoxContainer/MarginContainer/HBoxContainer" unique_id=2102478755]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_r67kn")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_r67kn")
 text = "GAME"
-script = SubResource("GDScript_cr3o2")
+script = SubResource("GDScript_r67kn")
 
-[node name="Button2" type="Button" parent="." unique_id=1384841477]
-layout_mode = 0
-offset_left = -4.0
-offset_top = 40.0
-offset_right = 64.0
-offset_bottom = 71.0
-text = "BAKEYR"
-script = SubResource("GDScript_qr5sa")
+[node name="Button2" type="Button" parent="MarginContainer/HBoxContainer/MarginContainer/HBoxContainer" unique_id=1384841477]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_r67kn")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_brbbq")
+text = "BAKERY"
+script = SubResource("GDScript_brbbq")
 
-[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
-[connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]
+[node name="SubViewport" type="SubViewport" parent="." unique_id=2114745842]
+size = Vector2i(1152, 648)
+
+[node name="Parallax2D" type="Parallax2D" parent="SubViewport" unique_id=77219714]
+repeat_size = Vector2(1152, 640)
+autoscroll = Vector2(20, 100)
+repeat_times = 5
+
+[node name="TileMapLayer3" type="TileMapLayer" parent="SubViewport/Parallax2D" unique_id=938219579]
+z_index = -2
+tile_map_data = PackedByteArray("AAA0AAAAAAAAAAAAAAA4AAAAAAAAAAAAAAARAAAAAAAAAAAAAAAPAAAAAAAAAAAAAAAOAAAAAAAAAAAAAAANAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAACAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAGAAAAAAAAAAAAAAAHAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAJAAAAAAAAAAAAAAAKAAAAAAAAAAAAAAALAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAAgAAAAAAAAAAAABAAEAAAAAAAAAAAABAAIAAAAAAAAAAAABAAMAAAAAAAAAAAABAAQAAAAAAAAAAAABAAUAAAAAAAAAAAABAAYAAAAAAAAAAAABAAcAAAAAAAAAAAABAAgAAAAAAAAAAAACAAEAAAAAAAAAAAACAAIAAAAAAAAAAAACAAMAAAAAAAAAAAACAAQAAAAAAAAAAAACAAUAAAAAAAAAAAACAAYAAAAAAAAAAAACAAcAAAAAAAAAAAACAAgAAAAAAAAAAAADAAEAAAAAAAAAAAADAAIAAAAAAAAAAAADAAMAAAAAAAAAAAADAAQAAAAAAAAAAAADAAUAAAAAAAAAAAADAAYAAAAAAAAAAAADAAcAAAAAAAAAAAADAAgAAAAAAAAAAAAEAAEAAAAAAAAAAAAEAAIAAAAAAAAAAAAEAAMAAAAAAAAAAAAEAAQAAAAAAAAAAAAEAAUAAAAAAAAAAAAEAAYAAAAAAAAAAAAEAAcAAAAAAAAAAAAEAAgAAAAAAAAAAAAFAAEAAAAAAAAAAAAFAAIAAAAAAAAAAAAFAAMAAAAAAAAAAAAFAAQAAAAAAAAAAAAFAAUAAAAAAAAAAAAFAAYAAAAAAAAAAAAFAAcAAAAAAAAAAAAFAAgAAAAAAAAAAAAGAAEAAAAAAAAAAAAGAAIAAAAAAAAAAAAGAAMAAAAAAAAAAAAGAAQAAAAAAAAAAAAGAAUAAAAAAAAAAAAGAAYAAAAAAAAAAAAGAAcAAAAAAAAAAAAGAAgAAAAAAAAAAAAHAAEAAAAAAAAAAAAHAAIAAAAAAAAAAAAHAAMAAAAAAAAAAAAHAAQAAAAAAAAAAAAHAAUAAAAAAAAAAAAHAAYAAAAAAAAAAAAHAAcAAAAAAAAAAAAHAAgAAAAAAAAAAAAIAAEAAAAAAAAAAAAIAAIAAAAAAAAAAAAIAAMAAAAAAAAAAAAIAAQAAAAAAAAAAAAIAAUAAAAAAAAAAAAIAAYAAAAAAAAAAAAIAAcAAAAAAAAAAAAIAAgAAAAAAAAAAAAJAAEAAAAAAAAAAAAJAAIAAAAAAAAAAAAJAAMAAAAAAAAAAAAJAAQAAAAAAAAAAAAJAAUAAAAAAAAAAAAJAAYAAAAAAAAAAAAJAAcAAAAAAAAAAAAJAAgAAAAAAAAAAAAKAAEAAAAAAAAAAAAKAAIAAAAAAAAAAAAKAAMAAAAAAAAAAAAKAAQAAAAAAAAAAAAKAAUAAAAAAAAAAAAKAAYAAAAAAAAAAAAKAAcAAAAAAAAAAAAKAAgAAAAAAAAAAAALAAEAAAAAAAAAAAALAAIAAAAAAAAAAAALAAMAAAAAAAAAAAALAAQAAAAAAAAAAAALAAUAAAAAAAAAAAALAAYAAAAAAAAAAAALAAcAAAAAAAAAAAALAAgAAAAAAAAAAAAMAAEAAAAAAAAAAAAMAAIAAAAAAAAAAAAMAAMAAAAAAAAAAAAMAAQAAAAAAAAAAAAMAAUAAAAAAAAAAAAMAAYAAAAAAAAAAAAMAAcAAAAAAAAAAAAMAAgAAAAAAAAAAAANAAEAAAAAAAAAAAANAAIAAAAAAAAAAAANAAMAAAAAAAAAAAANAAQAAAAAAAAAAAANAAUAAAAAAAAAAAANAAYAAAAAAAAAAAANAAcAAAAAAAAAAAANAAgAAAAAAAAAAAAOAAEAAAAAAAAAAAAOAAIAAAAAAAAAAAAOAAMAAAAAAAAAAAAOAAQAAAAAAAAAAAAOAAUAAAAAAAAAAAAOAAYAAAAAAAAAAAAOAAcAAAAAAAAAAAAOAAgAAAAAAAAAAAAPAAEAAAAAAAAAAAAPAAIAAAAAAAAAAAAPAAMAAAAAAAAAAAAPAAQAAAAAAAAAAAAPAAUAAAAAAAAAAAAPAAYAAAAAAAAAAAAPAAcAAAAAAAAAAAAPAAgAAAAAAAAAAAAQAAEAAAAAAAAAAAAQAAIAAAAAAAAAAAAQAAMAAAAAAAAAAAAQAAQAAAAAAAAAAAAQAAUAAAAAAAAAAAAQAAYAAAAAAAAAAAAQAAcAAAAAAAAAAAAQAAgAAAAAAAAAAAARAAEAAAAAAAAAAAARAAIAAAAAAAAAAAARAAMAAAAAAAAAAAARAAQAAAAAAAAAAAARAAUAAAAAAAAAAAARAAYAAAAAAAAAAAARAAcAAAAAAAAAAAARAAgAAAAAAAAAAAAAAAkAAAAAAAAAAAABAAkAAAAAAAAAAAACAAkAAAAAAAAAAAADAAkAAAAAAAAAAAAEAAkAAAAAAAAAAAAFAAkAAAAAAAAAAAAGAAkAAAAAAAAAAAAHAAkAAAAAAAAAAAAIAAkAAAAAAAAAAAAJAAkAAAAAAAAAAAAKAAkAAAAAAAAAAAALAAkAAAAAAAAAAAAMAAkAAAAAAAAAAAANAAkAAAAAAAAAAAAOAAkAAAAAAAAAAAAPAAkAAAAAAAAAAAAQAAkAAAAAAAAAAAARAAkAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_brbbq")
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/MarginContainer/HBoxContainer/Button" to="MarginContainer/HBoxContainer/MarginContainer/HBoxContainer/Button" method="_on_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/MarginContainer/HBoxContainer/Button2" to="MarginContainer/HBoxContainer/MarginContainer/HBoxContainer/Button2" method="_on_pressed"]

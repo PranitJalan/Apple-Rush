@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://bugjxrm4rmrgn"]
+
+[ext_resource type="Texture2D" uid="uid://dca2n6sg8bhug" path="res://assets/Items/Fruits/Apple.png" id="1_8h8dy"]
+[ext_resource type="FontFile" uid="uid://c253tsfxn4ssc" path="res://assets/Menu/Text/Text (Black) (8x10).png" id="2_jyhvf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6lsg6"]
+bg_color = Color(0.8895387, 0.7102145, 0, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8h8dy"]
+atlas = ExtResource("1_8h8dy")
+region = Rect2(9, 6, 14, 16)
+
+[node name="TextureRect" type="Panel" unique_id=1824719182]
+offset_right = 84.0
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_6lsg6")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=469240510]
+layout_mode = 0
+offset_right = 84.0
+offset_bottom = 36.0
+theme_override_constants/separation = 8
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer" unique_id=2015634306]
+custom_minimum_size = Vector2(100, 100)
+custom_maximum_size = Vector2(30, 30)
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(5, 5)
+texture = SubResource("AtlasTexture_8h8dy")
+
+[node name="Label" type="Label" parent="HBoxContainer" unique_id=743413012]
+custom_minimum_size = Vector2(44, 27)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_jyhvf")
+theme_override_font_sizes/font_size = 18
+text = "99+"
+horizontal_alignment = 1
+vertical_alignment = 1
