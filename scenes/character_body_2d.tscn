@@ -252,7 +252,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_afmmk"]
-size = Vector2(30, 57.500015)
+size = Vector2(40.00003, 66.25004)
 
 [node name="Player" type="CharacterBody2D" unique_id=1810582521 groups=["Player"]]
 position = Vector2(135, 64)
@@ -268,8 +268,8 @@ animation = &"death"
 autoplay = "run"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=793839105]
-position = Vector2(0, 7.5)
-scale = Vector2(0.99999946, 0.99999946)
+position = Vector2(0, 11.875)
+scale = Vector2(0.9999992, 0.9999992)
 shape = SubResource("RectangleShape2D_afmmk")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=374280496]

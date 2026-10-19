@@ -16,8 +16,8 @@
 [sub_resource type="GDScript" id="GDScript_afmmk"]
 script/source = "extends Control
 
-@onready var control: Control = $Control
-@onready var margin_container: MarginContainer = $MarginContainer
+@onready var control: Control = $BAKERY
+@onready var margin_container: MarginContainer = $MAINMENU
 
 
 
@@ -66,6 +66,24 @@ corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tac8f"]
+bg_color = Color(0.94033027, 0.4408614, 3.85046e-07, 1)
+skew = Vector2(1, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_size = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kql7n"]
+content_margin_bottom = 15.0
+bg_color = Color(0.94033027, 0.4408614, 3.85046e-07, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_size = 10
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_brbbq"]
 content_margin_bottom = 15.0
 bg_color = Color(0.94033027, 0.4408614, 3.85046e-07, 1)
@@ -73,6 +91,24 @@ corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vb5ih"]
+bg_color = Color(0.94033027, 0.4408614, 3.85046e-07, 1)
+skew = Vector2(1, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_size = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6pn8l"]
+content_margin_bottom = 15.0
+bg_color = Color(0.94033027, 0.4408614, 3.85046e-07, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_size = 10
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_r67kn"]
 texture = ExtResource("1_5p55f")
@@ -153,8 +189,7 @@ func _on_pressed() -> void:
 	print(\"baked \" + fruit + str(total) + \"into \" + str(EVENT.pies))
 
 
-func _on_button_pressed() -> void:
-	pass # Replace with function body.
+
 "
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kaou4"]
@@ -368,7 +403,127 @@ func _process(delta: float) -> void:
 		disabled = false
 "
 
-[node name="Control" type="Control" unique_id=1340829750]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sv41r"]
+bg_color = Color(1, 1, 0, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6lsg6"]
+bg_color = Color(0.8217887, 0.82178867, 0.82178867, 0.16862746)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="GDScript" id="GDScript_yv1b8"]
+script/source = "extends Panel
+
+@onready var label: Label = $HBoxContainer/Label
+
+
+func _process(delta: float) -> void:
+	var number = EVENT.apples
+	label.text = str(number)
+	if number > 999:
+		label.text = \"999+\"
+"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8h8dy"]
+atlas = ExtResource("3_kql7n")
+region = Rect2(9, 6, 14, 16)
+
+[sub_resource type="GDScript" id="GDScript_kql7n"]
+script/source = "extends Panel
+
+
+@onready var label: Label = $HBoxContainer/Label
+
+
+func _process(delta: float) -> void:
+	var number = EVENT.bananas
+	label.text = str(number)
+	if number > 999:
+		label.text = \"999+\"
+"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jyhvf"]
+atlas = ExtResource("5_vb5ih")
+region = Rect2(8, 7, 16, 16)
+
+[sub_resource type="GDScript" id="GDScript_tac8f"]
+script/source = "extends Panel
+
+
+@onready var label: Label = $HBoxContainer/Label
+
+
+func _process(delta: float) -> void:
+	var number = EVENT.oranges
+	label.text = str(number)
+	if number > 999:
+		label.text = \"999+\"
+"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vmgu0"]
+atlas = ExtResource("7_0jf8d")
+region = Rect2(8, 8, 19, 16)
+
+[sub_resource type="GDScript" id="GDScript_vb5ih"]
+script/source = "extends Panel
+
+
+@onready var label: Label = $HBoxContainer/Label
+
+
+func _process(delta: float) -> void:
+	var number = EVENT.strawberries
+	label.text = str(number)
+	if number > 999:
+		label.text = \"999+\"
+"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_blfow"]
+atlas = ExtResource("8_apcft")
+region = Rect2(10, 8, 13, 16)
+
+[sub_resource type="GDScript" id="GDScript_3lxo1"]
+script/source = "extends Panel
+
+
+@onready var label: Label = $HBoxContainer/Label
+
+
+func _process(delta: float) -> void:
+	var number = EVENT.cherries
+	label.text = str(number)
+	if number > 999:
+		label.text = \"999+\"
+"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kql7n"]
+atlas = ExtResource("9_2pn8f")
+region = Rect2(8, 8, 16, 16)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0jf8d"]
+bg_color = Color(0.8217887, 0.82178867, 0.82178867, 0.16862746)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="GDScript" id="GDScript_20t58"]
+script/source = "extends Panel
+
+
+@onready var label: Label = $HBoxContainer/Label
+
+
+func _process(delta: float) -> void:
+	var number = EVENT.pies
+	label.text = str(number)
+	if number > 999:
+		label.text = \"999+\"
+"
+
+[node name="Entire UI" type="Control" unique_id=1340829750]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -377,22 +532,18 @@ grow_horizontal = 2
 grow_vertical = 2
 script = SubResource("GDScript_afmmk")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=654047915]
+[node name="BACKGROUND" type="TextureRect" parent="." unique_id=654047915]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -576.5
-offset_top = -325.5
-offset_right = 576.5
-offset_bottom = 325.5
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -648.0
 grow_horizontal = 2
-grow_vertical = 2
+grow_vertical = 0
 texture = SubResource("ViewportTexture_qr5sa")
 
-[node name="MarginContainer" type="MarginContainer" parent="." unique_id=763232906]
+[node name="MAINMENU" type="MarginContainer" parent="." unique_id=763232906]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -406,10 +557,10 @@ offset_bottom = 244.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="HBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=430286064]
+[node name="HBoxContainer" type="VBoxContainer" parent="MAINMENU" unique_id=430286064]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/HBoxContainer" unique_id=1780433983]
+[node name="Label" type="Label" parent="MAINMENU/HBoxContainer" unique_id=1780433983]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_r67kn")
 theme_override_font_sizes/font_size = 72
@@ -417,36 +568,40 @@ text = "PIE WARRIOR"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Control" type="Control" parent="MarginContainer/HBoxContainer" unique_id=1721554207]
+[node name="Control" type="Control" parent="MAINMENU/HBoxContainer" unique_id=1721554207]
 custom_minimum_size = Vector2(0, 150)
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer" unique_id=997993416]
+[node name="MarginContainer" type="MarginContainer" parent="MAINMENU/HBoxContainer" unique_id=997993416]
 layout_mode = 2
 size_flags_stretch_ratio = 0.0
 theme_override_constants/margin_left = 180
 theme_override_constants/margin_right = 0
 theme_override_constants/margin_bottom = 50
 
-[node name="HBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/MarginContainer" unique_id=1107452162]
+[node name="HBoxContainer" type="VBoxContainer" parent="MAINMENU/HBoxContainer/MarginContainer" unique_id=1107452162]
 custom_minimum_size = Vector2(0, 150)
 custom_maximum_size = Vector2(250, -1)
 layout_mode = 2
 
-[node name="Button" type="Button" parent="MarginContainer/HBoxContainer/MarginContainer/HBoxContainer" unique_id=2102478755]
+[node name="Button" type="Button" parent="MAINMENU/HBoxContainer/MarginContainer/HBoxContainer" unique_id=2102478755]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_r67kn")
 theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxFlat_r67kn")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_tac8f")
+theme_override_styles/hover = SubResource("StyleBoxFlat_kql7n")
 text = "GAME"
 
-[node name="Button2" type="Button" parent="MarginContainer/HBoxContainer/MarginContainer/HBoxContainer" unique_id=1384841477]
+[node name="Button2" type="Button" parent="MAINMENU/HBoxContainer/MarginContainer/HBoxContainer" unique_id=1384841477]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_r67kn")
 theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxFlat_brbbq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vb5ih")
+theme_override_styles/hover = SubResource("StyleBoxFlat_6pn8l")
 text = "BAKERY"
 
 [node name="SubViewport" type="SubViewport" parent="." unique_id=2114745842]
@@ -462,11 +617,11 @@ z_index = -2
 tile_map_data = PackedByteArray("AAA0AAAAAAAAAAAAAAA4AAAAAAAAAAAAAAARAAAAAAAAAAAAAAAPAAAAAAAAAAAAAAAOAAAAAAAAAAAAAAANAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAACAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAGAAAAAAAAAAAAAAAHAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAJAAAAAAAAAAAAAAAKAAAAAAAAAAAAAAALAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAAgAAAAAAAAAAAABAAEAAAAAAAAAAAABAAIAAAAAAAAAAAABAAMAAAAAAAAAAAABAAQAAAAAAAAAAAABAAUAAAAAAAAAAAABAAYAAAAAAAAAAAABAAcAAAAAAAAAAAABAAgAAAAAAAAAAAACAAEAAAAAAAAAAAACAAIAAAAAAAAAAAACAAMAAAAAAAAAAAACAAQAAAAAAAAAAAACAAUAAAAAAAAAAAACAAYAAAAAAAAAAAACAAcAAAAAAAAAAAACAAgAAAAAAAAAAAADAAEAAAAAAAAAAAADAAIAAAAAAAAAAAADAAMAAAAAAAAAAAADAAQAAAAAAAAAAAADAAUAAAAAAAAAAAADAAYAAAAAAAAAAAADAAcAAAAAAAAAAAADAAgAAAAAAAAAAAAEAAEAAAAAAAAAAAAEAAIAAAAAAAAAAAAEAAMAAAAAAAAAAAAEAAQAAAAAAAAAAAAEAAUAAAAAAAAAAAAEAAYAAAAAAAAAAAAEAAcAAAAAAAAAAAAEAAgAAAAAAAAAAAAFAAEAAAAAAAAAAAAFAAIAAAAAAAAAAAAFAAMAAAAAAAAAAAAFAAQAAAAAAAAAAAAFAAUAAAAAAAAAAAAFAAYAAAAAAAAAAAAFAAcAAAAAAAAAAAAFAAgAAAAAAAAAAAAGAAEAAAAAAAAAAAAGAAIAAAAAAAAAAAAGAAMAAAAAAAAAAAAGAAQAAAAAAAAAAAAGAAUAAAAAAAAAAAAGAAYAAAAAAAAAAAAGAAcAAAAAAAAAAAAGAAgAAAAAAAAAAAAHAAEAAAAAAAAAAAAHAAIAAAAAAAAAAAAHAAMAAAAAAAAAAAAHAAQAAAAAAAAAAAAHAAUAAAAAAAAAAAAHAAYAAAAAAAAAAAAHAAcAAAAAAAAAAAAHAAgAAAAAAAAAAAAIAAEAAAAAAAAAAAAIAAIAAAAAAAAAAAAIAAMAAAAAAAAAAAAIAAQAAAAAAAAAAAAIAAUAAAAAAAAAAAAIAAYAAAAAAAAAAAAIAAcAAAAAAAAAAAAIAAgAAAAAAAAAAAAJAAEAAAAAAAAAAAAJAAIAAAAAAAAAAAAJAAMAAAAAAAAAAAAJAAQAAAAAAAAAAAAJAAUAAAAAAAAAAAAJAAYAAAAAAAAAAAAJAAcAAAAAAAAAAAAJAAgAAAAAAAAAAAAKAAEAAAAAAAAAAAAKAAIAAAAAAAAAAAAKAAMAAAAAAAAAAAAKAAQAAAAAAAAAAAAKAAUAAAAAAAAAAAAKAAYAAAAAAAAAAAAKAAcAAAAAAAAAAAAKAAgAAAAAAAAAAAALAAEAAAAAAAAAAAALAAIAAAAAAAAAAAALAAMAAAAAAAAAAAALAAQAAAAAAAAAAAALAAUAAAAAAAAAAAALAAYAAAAAAAAAAAALAAcAAAAAAAAAAAALAAgAAAAAAAAAAAAMAAEAAAAAAAAAAAAMAAIAAAAAAAAAAAAMAAMAAAAAAAAAAAAMAAQAAAAAAAAAAAAMAAUAAAAAAAAAAAAMAAYAAAAAAAAAAAAMAAcAAAAAAAAAAAAMAAgAAAAAAAAAAAANAAEAAAAAAAAAAAANAAIAAAAAAAAAAAANAAMAAAAAAAAAAAANAAQAAAAAAAAAAAANAAUAAAAAAAAAAAANAAYAAAAAAAAAAAANAAcAAAAAAAAAAAANAAgAAAAAAAAAAAAOAAEAAAAAAAAAAAAOAAIAAAAAAAAAAAAOAAMAAAAAAAAAAAAOAAQAAAAAAAAAAAAOAAUAAAAAAAAAAAAOAAYAAAAAAAAAAAAOAAcAAAAAAAAAAAAOAAgAAAAAAAAAAAAPAAEAAAAAAAAAAAAPAAIAAAAAAAAAAAAPAAMAAAAAAAAAAAAPAAQAAAAAAAAAAAAPAAUAAAAAAAAAAAAPAAYAAAAAAAAAAAAPAAcAAAAAAAAAAAAPAAgAAAAAAAAAAAAQAAEAAAAAAAAAAAAQAAIAAAAAAAAAAAAQAAMAAAAAAAAAAAAQAAQAAAAAAAAAAAAQAAUAAAAAAAAAAAAQAAYAAAAAAAAAAAAQAAcAAAAAAAAAAAAQAAgAAAAAAAAAAAARAAEAAAAAAAAAAAARAAIAAAAAAAAAAAARAAMAAAAAAAAAAAARAAQAAAAAAAAAAAARAAUAAAAAAAAAAAARAAYAAAAAAAAAAAARAAcAAAAAAAAAAAARAAgAAAAAAAAAAAAAAAkAAAAAAAAAAAABAAkAAAAAAAAAAAACAAkAAAAAAAAAAAADAAkAAAAAAAAAAAAEAAkAAAAAAAAAAAAFAAkAAAAAAAAAAAAGAAkAAAAAAAAAAAAHAAkAAAAAAAAAAAAIAAkAAAAAAAAAAAAJAAkAAAAAAAAAAAAKAAkAAAAAAAAAAAALAAkAAAAAAAAAAAAMAAkAAAAAAAAAAAANAAkAAAAAAAAAAAAOAAkAAAAAAAAAAAAPAAkAAAAAAAAAAAAQAAkAAAAAAAAAAAARAAkAAAAAAAAAAAA=")
 tile_set = SubResource("TileSet_brbbq")
 
-[node name="Control" type="Control" parent="." unique_id=1468842754]
+[node name="BAKERY" type="Control" parent="." unique_id=1468842754]
 layout_mode = 1
 anchors_preset = 0
 
-[node name="MarginContainer2" type="MarginContainer" parent="Control" unique_id=1531498651]
+[node name="MarginContainer2" type="MarginContainer" parent="BAKERY" unique_id=1531498651]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -480,11 +635,11 @@ offset_bottom = 599.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer2" unique_id=1998494248]
+[node name="VBoxContainer" type="VBoxContainer" parent="BAKERY/MarginContainer2" unique_id=1998494248]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="Label" type="Label" parent="Control/MarginContainer2/VBoxContainer" unique_id=877935721]
+[node name="Label" type="Label" parent="BAKERY/MarginContainer2/VBoxContainer" unique_id=877935721]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_r67kn")
 theme_override_font_sizes/font_size = 48
@@ -492,17 +647,17 @@ text = "BAKERY"
 horizontal_alignment = 1
 uppercase = true
 
-[node name="Control" type="Control" parent="Control/MarginContainer2/VBoxContainer" unique_id=1102172035]
+[node name="Control" type="Control" parent="BAKERY/MarginContainer2/VBoxContainer" unique_id=1102172035]
 custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
 
-[node name="CenterContainer" type="CenterContainer" parent="Control/MarginContainer2/VBoxContainer" unique_id=503958147]
+[node name="CenterContainer" type="CenterContainer" parent="BAKERY/MarginContainer2/VBoxContainer" unique_id=503958147]
 layout_mode = 2
 
-[node name="apple" type="HBoxContainer" parent="Control/MarginContainer2/VBoxContainer/CenterContainer" unique_id=1750386973]
+[node name="apple" type="HBoxContainer" parent="BAKERY/MarginContainer2/VBoxContainer/CenterContainer" unique_id=1750386973]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="Control/MarginContainer2/VBoxContainer/CenterContainer/apple" unique_id=1031375958]
+[node name="Label" type="Label" parent="BAKERY/MarginContainer2/VBoxContainer/CenterContainer/apple" unique_id=1031375958]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_r67kn")
@@ -510,7 +665,7 @@ theme_override_font_sizes/font_size = 32
 text = "98X"
 vertical_alignment = 1
 
-[node name="TextureRect" type="TextureRect" parent="Control/MarginContainer2/VBoxContainer/CenterContainer/apple" unique_id=1091312108]
+[node name="TextureRect" type="TextureRect" parent="BAKERY/MarginContainer2/VBoxContainer/CenterContainer/apple" unique_id=1091312108]
 texture_filter = 1
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
@@ -518,7 +673,7 @@ texture = SubResource("AtlasTexture_an0t8")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Label2" type="Label" parent="Control/MarginContainer2/VBoxContainer/CenterContainer/apple" unique_id=24238352]
+[node name="Label2" type="Label" parent="BAKERY/MarginContainer2/VBoxContainer/CenterContainer/apple" unique_id=24238352]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_r67kn")
@@ -527,7 +682,7 @@ text = ".."
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button" type="Button" parent="Control/MarginContainer2/VBoxContainer/CenterContainer/apple" unique_id=714446551]
+[node name="apple" type="Button" parent="BAKERY/MarginContainer2/VBoxContainer/CenterContainer/apple" unique_id=714446551]
 layout_mode = 2
 theme_override_colors/font_color = Color(15.370708, 16.215857, 18.892157, 1)
 theme_override_fonts/font = ExtResource("4_tac8f")
@@ -541,13 +696,13 @@ script = SubResource("GDScript_ednal")
 cost = 20
 fruit = "apples"
 
-[node name="CenterContainer2" type="CenterContainer" parent="Control/MarginContainer2/VBoxContainer" unique_id=1906431065]
+[node name="CenterContainer2" type="CenterContainer" parent="BAKERY/MarginContainer2/VBoxContainer" unique_id=1906431065]
 layout_mode = 2
 
-[node name="banana" type="HBoxContainer" parent="Control/MarginContainer2/VBoxContainer/CenterContainer2" unique_id=588143993]
+[node name="banana" type="HBoxContainer" parent="BAKERY/MarginContainer2/VBoxContainer/CenterContainer2" unique_id=588143993]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="Control/MarginContainer2/VBoxContainer/CenterContainer2/banana" unique_id=649942025]
+[node name="Label" type="Label" parent="BAKERY/MarginContainer2/VBoxContainer/CenterContainer2/banana" unique_id=649942025]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_r67kn")
@@ -555,7 +710,7 @@ theme_override_font_sizes/font_size = 32
 text = "    98X"
 vertical_alignment = 1
 
-[node name="TextureRect" type="TextureRect" parent="Control/MarginContainer2/VBoxContainer/CenterContainer2/banana" unique_id=735027456]
+[node name="TextureRect" type="TextureRect" parent="BAKERY/MarginContainer2/VBoxContainer/CenterContainer2/banana" unique_id=735027456]
 texture_filter = 1
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
@@ -563,7 +718,7 @@ texture = SubResource("AtlasTexture_kaou4")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Label2" type="Label" parent="Control/MarginContainer2/VBoxContainer/CenterContainer2/banana" unique_id=8697774]
+[node name="Label2" type="Label" parent="BAKERY/MarginContainer2/VBoxContainer/CenterContainer2/banana" unique_id=8697774]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_r67kn")
@@ -572,7 +727,7 @@ text = ".."
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button" type="Button" parent="Control/MarginContainer2/VBoxContainer/CenterContainer2/banana" unique_id=322078973]
+[node name="banana" type="Button" parent="BAKERY/MarginContainer2/VBoxContainer/CenterContainer2/banana" unique_id=322078973]
 layout_mode = 2
 theme_override_colors/font_color = Color(15.370708, 16.215857, 18.892157, 1)
 theme_override_fonts/font = ExtResource("4_tac8f")
@@ -586,13 +741,13 @@ script = ExtResource("6_6pn8l")
 cost = 15
 fruit = "bananas"
 
-[node name="CenterContainer3" type="CenterContainer" parent="Control/MarginContainer2/VBoxContainer" unique_id=477189655]
+[node name="CenterContainer3" type="CenterContainer" parent="BAKERY/MarginContainer2/VBoxContainer" unique_id=477189655]
 layout_mode = 2
 
-[node name="oranges" type="HBoxContainer" parent="Control/MarginContainer2/VBoxContainer/CenterContainer3" unique_id=849694040]
+[node name="oranges" type="HBoxContainer" parent="BAKERY/MarginContainer2/VBoxContainer/CenterContainer3" unique_id=849694040]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="Control/MarginContainer2/VBoxContainer/CenterContainer3/oranges" unique_id=715397861]
+[node name="Label" type="Label" parent="BAKERY/MarginContainer2/VBoxContainer/CenterContainer3/oranges" unique_id=715397861]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_r67kn")
@@ -600,7 +755,7 @@ theme_override_font_sizes/font_size = 32
 text = "    98X"
 vertical_alignment = 1
 
-[node name="TextureRect" type="TextureRect" parent="Control/MarginContainer2/VBoxContainer/CenterContainer3/oranges" unique_id=375198779]
+[node name="TextureRect" type="TextureRect" parent="BAKERY/MarginContainer2/VBoxContainer/CenterContainer3/oranges" unique_id=375198779]
 texture_filter = 1
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
@@ -608,7 +763,7 @@ texture = SubResource("AtlasTexture_mnht8")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Label2" type="Label" parent="Control/MarginContainer2/VBoxContainer/CenterContainer3/oranges" unique_id=141967403]
+[node name="Label2" type="Label" parent="BAKERY/MarginContainer2/VBoxContainer/CenterContainer3/oranges" unique_id=141967403]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_r67kn")
@@ -617,7 +772,7 @@ text = ".."
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button" type="Button" parent="Control/MarginContainer2/VBoxContainer/CenterContainer3/oranges" unique_id=740009021]
+[node name="oranges" type="Button" parent="BAKERY/MarginContainer2/VBoxContainer/CenterContainer3/oranges" unique_id=740009021]
 layout_mode = 2
 theme_override_colors/font_color = Color(15.370708, 16.215857, 18.892157, 1)
 theme_override_fonts/font = ExtResource("4_tac8f")
@@ -628,12 +783,14 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_sej5b")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_sxeuk")
 text = " BAKE "
 script = SubResource("GDScript_nnsnw")
+cost = 10
+fruit = "oranges"
 
-[node name="strawberries" type="HBoxContainer" parent="Control/MarginContainer2/VBoxContainer" unique_id=124850481]
+[node name="strawberries" type="HBoxContainer" parent="BAKERY/MarginContainer2/VBoxContainer" unique_id=124850481]
 layout_mode = 2
 alignment = 1
 
-[node name="Label" type="Label" parent="Control/MarginContainer2/VBoxContainer/strawberries" unique_id=1160375304]
+[node name="Label" type="Label" parent="BAKERY/MarginContainer2/VBoxContainer/strawberries" unique_id=1160375304]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_r67kn")
@@ -641,7 +798,7 @@ theme_override_font_sizes/font_size = 32
 text = "    98X"
 vertical_alignment = 1
 
-[node name="TextureRect" type="TextureRect" parent="Control/MarginContainer2/VBoxContainer/strawberries" unique_id=1184252227]
+[node name="TextureRect" type="TextureRect" parent="BAKERY/MarginContainer2/VBoxContainer/strawberries" unique_id=1184252227]
 texture_filter = 1
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
@@ -649,7 +806,7 @@ texture = SubResource("AtlasTexture_61o30")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Label2" type="Label" parent="Control/MarginContainer2/VBoxContainer/strawberries" unique_id=521645800]
+[node name="Label2" type="Label" parent="BAKERY/MarginContainer2/VBoxContainer/strawberries" unique_id=521645800]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_r67kn")
@@ -658,7 +815,7 @@ text = ".."
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button" type="Button" parent="Control/MarginContainer2/VBoxContainer/strawberries" unique_id=805378844]
+[node name="strawberries" type="Button" parent="BAKERY/MarginContainer2/VBoxContainer/strawberries" unique_id=805378844]
 layout_mode = 2
 theme_override_colors/font_color = Color(15.370708, 16.215857, 18.892157, 1)
 theme_override_fonts/font = ExtResource("4_tac8f")
@@ -669,12 +826,14 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_sej5b")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_po8yf")
 text = " BAKE "
 script = SubResource("GDScript_7o2ue")
+cost = 6
+fruit = "strawberries"
 
-[node name="cherries" type="HBoxContainer" parent="Control/MarginContainer2/VBoxContainer" unique_id=1882822293]
+[node name="cherries" type="HBoxContainer" parent="BAKERY/MarginContainer2/VBoxContainer" unique_id=1882822293]
 layout_mode = 2
 alignment = 1
 
-[node name="Label" type="Label" parent="Control/MarginContainer2/VBoxContainer/cherries" unique_id=2101349578]
+[node name="Label" type="Label" parent="BAKERY/MarginContainer2/VBoxContainer/cherries" unique_id=2101349578]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_r67kn")
@@ -682,7 +841,7 @@ theme_override_font_sizes/font_size = 32
 text = "    98X"
 vertical_alignment = 1
 
-[node name="TextureRect" type="TextureRect" parent="Control/MarginContainer2/VBoxContainer/cherries" unique_id=1698719462]
+[node name="TextureRect" type="TextureRect" parent="BAKERY/MarginContainer2/VBoxContainer/cherries" unique_id=1698719462]
 texture_filter = 1
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
@@ -690,7 +849,7 @@ texture = SubResource("AtlasTexture_72v1w")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Label2" type="Label" parent="Control/MarginContainer2/VBoxContainer/cherries" unique_id=1314647446]
+[node name="Label2" type="Label" parent="BAKERY/MarginContainer2/VBoxContainer/cherries" unique_id=1314647446]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_r67kn")
@@ -699,7 +858,7 @@ text = ".."
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button" type="Button" parent="Control/MarginContainer2/VBoxContainer/cherries" unique_id=2004820736]
+[node name="cherries" type="Button" parent="BAKERY/MarginContainer2/VBoxContainer/cherries" unique_id=2004820736]
 layout_mode = 2
 theme_override_colors/font_color = Color(15.370708, 16.215857, 18.892157, 1)
 theme_override_fonts/font = ExtResource("4_tac8f")
@@ -710,8 +869,10 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_sej5b")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_qsysb")
 text = " BAKE "
 script = SubResource("GDScript_hl4in")
+cost = 2
+fruit = "cherries"
 
-[node name="Label2" type="Label" parent="Control/MarginContainer2/VBoxContainer" unique_id=1888417805]
+[node name="Label2" type="Label" parent="BAKERY/MarginContainer2/VBoxContainer" unique_id=1888417805]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_r67kn")
 theme_override_font_sizes/font_size = 20
@@ -719,11 +880,11 @@ text = "  ENTER THE NUMBER OF PIES TO BAKE-"
 horizontal_alignment = 1
 uppercase = true
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer2/VBoxContainer" unique_id=2076419821]
+[node name="HBoxContainer" type="HBoxContainer" parent="BAKERY/MarginContainer2/VBoxContainer" unique_id=2076419821]
 layout_mode = 2
 alignment = 1
 
-[node name="Button" type="Button" parent="Control/MarginContainer2/VBoxContainer/HBoxContainer" unique_id=750214980]
+[node name="Button" type="Button" parent="BAKERY/MarginContainer2/VBoxContainer/HBoxContainer" unique_id=750214980]
 layout_mode = 2
 theme_override_colors/font_pressed_color = Color(0.099985994, 0.099985994, 0.099985994, 1)
 theme_override_colors/font_hover_color = Color(0.4700756, 0.4700758, 0.47007674, 1)
@@ -740,18 +901,18 @@ disabled = true
 text = "-"
 script = SubResource("GDScript_qmj53")
 
-[node name="Label" type="Label" parent="Control/MarginContainer2/VBoxContainer/HBoxContainer" unique_id=1907902392]
+[node name="Label" type="Label" parent="BAKERY/MarginContainer2/VBoxContainer/HBoxContainer" unique_id=1907902392]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_r67kn")
 theme_override_font_sizes/font_size = 40
 script = ExtResource("10_tfhda")
 
-[node name="TextureRect" type="TextureRect" parent="Control/MarginContainer2/VBoxContainer/HBoxContainer" unique_id=1243821021]
+[node name="TextureRect" type="TextureRect" parent="BAKERY/MarginContainer2/VBoxContainer/HBoxContainer" unique_id=1243821021]
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
 texture = ExtResource("11_usxgj")
 
-[node name="button" type="Button" parent="Control/MarginContainer2/VBoxContainer/HBoxContainer" unique_id=1577235709]
+[node name="button" type="Button" parent="BAKERY/MarginContainer2/VBoxContainer/HBoxContainer" unique_id=1577235709]
 layout_mode = 2
 theme_override_colors/font_pressed_color = Color(0.09803922, 0.09803922, 0.09803922, 1)
 theme_override_colors/font_hover_color = Color(0.47058824, 0.47058824, 0.47058824, 1)
@@ -767,19 +928,219 @@ theme_override_styles/disabled = SubResource("StyleBoxFlat_3vrtg")
 text = "+"
 script = SubResource("GDScript_r5dke")
 
-[node name="Button" parent="Control" unique_id=832941648 instance=ExtResource("12_mmsp5")]
+[node name="Button" parent="BAKERY" unique_id=832941648 instance=ExtResource("12_mmsp5")]
 layout_mode = 0
 script = null
 
-[connection signal="pressed" from="MarginContainer/HBoxContainer/MarginContainer/HBoxContainer/Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="MarginContainer/HBoxContainer/MarginContainer/HBoxContainer/Button" to="." method="_on_button_pressed8"]
-[connection signal="pressed" from="MarginContainer/HBoxContainer/MarginContainer/HBoxContainer/Button" to="MarginContainer/HBoxContainer/MarginContainer/HBoxContainer/Button" method="_on_pressed"]
-[connection signal="pressed" from="MarginContainer/HBoxContainer/MarginContainer/HBoxContainer/Button2" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="Control/MarginContainer2/VBoxContainer/CenterContainer/apple/Button" to="Control/MarginContainer2/VBoxContainer/CenterContainer/apple/Button" method="_on_pressed"]
-[connection signal="pressed" from="Control/MarginContainer2/VBoxContainer/CenterContainer2/banana/Button" to="Control/MarginContainer2/VBoxContainer/CenterContainer2/banana/Button" method="_on_pressed"]
-[connection signal="pressed" from="Control/MarginContainer2/VBoxContainer/CenterContainer3/oranges/Button" to="Control/MarginContainer2/VBoxContainer/CenterContainer/apple/Button" method="_on_button_pressed"]
-[connection signal="pressed" from="Control/MarginContainer2/VBoxContainer/strawberries/Button" to="Control/MarginContainer2/VBoxContainer/CenterContainer/apple/Button" method="_on_button_pressed"]
-[connection signal="pressed" from="Control/MarginContainer2/VBoxContainer/cherries/Button" to="Control/MarginContainer2/VBoxContainer/CenterContainer/apple/Button" method="_on_button_pressed"]
-[connection signal="pressed" from="Control/MarginContainer2/VBoxContainer/HBoxContainer/Button" to="Control/MarginContainer2/VBoxContainer/HBoxContainer/Button" method="_on_pressed"]
-[connection signal="pressed" from="Control/MarginContainer2/VBoxContainer/HBoxContainer/button" to="Control/MarginContainer2/VBoxContainer/HBoxContainer/button" method="_on_pressed"]
-[connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]
+[node name="FRUIT COUNTER" type="Panel" parent="." unique_id=480463943]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -47.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_sv41r")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="FRUIT COUNTER" unique_id=1867865481]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -45.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 250
+
+[node name="TextureRect2" type="Panel" parent="FRUIT COUNTER/HBoxContainer" unique_id=1824719182]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6lsg6")
+script = SubResource("GDScript_yv1b8")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="FRUIT COUNTER/HBoxContainer/TextureRect2" unique_id=469240510]
+layout_mode = 0
+offset_top = -12.0
+offset_right = 153.0
+offset_bottom = 47.0
+theme_override_constants/separation = 8
+
+[node name="TextureRect" type="TextureRect" parent="FRUIT COUNTER/HBoxContainer/TextureRect2/HBoxContainer" unique_id=2015634306]
+custom_minimum_size = Vector2(100, 100)
+custom_maximum_size = Vector2(55, 55)
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(5, 2)
+texture = SubResource("AtlasTexture_8h8dy")
+
+[node name="Label" type="Label" parent="FRUIT COUNTER/HBoxContainer/TextureRect2/HBoxContainer" unique_id=743413012]
+custom_minimum_size = Vector2(75, 27)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_r67kn")
+theme_override_font_sizes/font_size = 24
+text = "999+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="Panel" parent="FRUIT COUNTER/HBoxContainer" unique_id=558460026]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6lsg6")
+script = SubResource("GDScript_kql7n")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="FRUIT COUNTER/HBoxContainer/TextureRect" unique_id=909371767]
+layout_mode = 0
+offset_top = -12.0
+offset_right = 153.0
+offset_bottom = 47.0
+theme_override_constants/separation = 8
+
+[node name="TextureRect" type="TextureRect" parent="FRUIT COUNTER/HBoxContainer/TextureRect/HBoxContainer" unique_id=1245595225]
+custom_minimum_size = Vector2(100, 100)
+custom_maximum_size = Vector2(55, 55)
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(5, 2)
+texture = SubResource("AtlasTexture_jyhvf")
+
+[node name="Label" type="Label" parent="FRUIT COUNTER/HBoxContainer/TextureRect/HBoxContainer" unique_id=888618944]
+custom_minimum_size = Vector2(75, 27)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_r67kn")
+theme_override_font_sizes/font_size = 24
+text = "999+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect3" type="Panel" parent="FRUIT COUNTER/HBoxContainer" unique_id=3328166]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6lsg6")
+script = SubResource("GDScript_tac8f")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="FRUIT COUNTER/HBoxContainer/TextureRect3" unique_id=2142167155]
+layout_mode = 0
+offset_top = -10.0
+offset_right = 153.0
+offset_bottom = 49.0
+theme_override_constants/separation = 8
+
+[node name="TextureRect" type="TextureRect" parent="FRUIT COUNTER/HBoxContainer/TextureRect3/HBoxContainer" unique_id=1297477964]
+custom_minimum_size = Vector2(100, 100)
+custom_maximum_size = Vector2(55, 55)
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(5, 2)
+texture = SubResource("AtlasTexture_vmgu0")
+
+[node name="Label" type="Label" parent="FRUIT COUNTER/HBoxContainer/TextureRect3/HBoxContainer" unique_id=843261696]
+custom_minimum_size = Vector2(75, 27)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_r67kn")
+theme_override_font_sizes/font_size = 24
+text = "999+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect4" type="Panel" parent="FRUIT COUNTER/HBoxContainer" unique_id=2052558895]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6lsg6")
+script = SubResource("GDScript_vb5ih")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="FRUIT COUNTER/HBoxContainer/TextureRect4" unique_id=425520423]
+layout_mode = 0
+offset_top = -12.0
+offset_right = 153.0
+offset_bottom = 47.0
+theme_override_constants/separation = 8
+
+[node name="TextureRect" type="TextureRect" parent="FRUIT COUNTER/HBoxContainer/TextureRect4/HBoxContainer" unique_id=1060738703]
+custom_minimum_size = Vector2(100, 100)
+custom_maximum_size = Vector2(45, 55)
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(5, 2)
+texture = SubResource("AtlasTexture_blfow")
+
+[node name="Label" type="Label" parent="FRUIT COUNTER/HBoxContainer/TextureRect4/HBoxContainer" unique_id=1713956775]
+custom_minimum_size = Vector2(75, 27)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_r67kn")
+theme_override_font_sizes/font_size = 24
+text = "999+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect5" type="Panel" parent="FRUIT COUNTER/HBoxContainer" unique_id=533085484]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6lsg6")
+script = SubResource("GDScript_3lxo1")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="FRUIT COUNTER/HBoxContainer/TextureRect5" unique_id=256655804]
+layout_mode = 0
+offset_top = -12.0
+offset_right = 153.0
+offset_bottom = 47.0
+theme_override_constants/separation = 8
+
+[node name="TextureRect" type="TextureRect" parent="FRUIT COUNTER/HBoxContainer/TextureRect5/HBoxContainer" unique_id=154293712]
+custom_minimum_size = Vector2(100, 100)
+custom_maximum_size = Vector2(55, 55)
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(5, 2)
+texture = SubResource("AtlasTexture_kql7n")
+
+[node name="Label" type="Label" parent="FRUIT COUNTER/HBoxContainer/TextureRect5/HBoxContainer" unique_id=746636170]
+custom_minimum_size = Vector2(75, 27)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_r67kn")
+theme_override_font_sizes/font_size = 24
+text = "999+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PIE COUNTER" type="Panel" parent="." unique_id=964717884]
+layout_mode = 0
+offset_left = 982.0
+offset_top = 18.0
+offset_right = 1134.0
+offset_bottom = 79.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_0jf8d")
+script = SubResource("GDScript_20t58")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PIE COUNTER" unique_id=1912641172]
+layout_mode = 0
+offset_top = -12.0
+offset_right = 139.0
+offset_bottom = 38.0
+theme_override_constants/separation = 8
+
+[node name="TextureRect" type="TextureRect" parent="PIE COUNTER/HBoxContainer" unique_id=1749927511]
+custom_minimum_size = Vector2(100, 100)
+custom_maximum_size = Vector2(50, 50)
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(5, 2)
+texture = ExtResource("11_usxgj")
+
+[node name="Label" type="Label" parent="PIE COUNTER/HBoxContainer" unique_id=1578117310]
+custom_minimum_size = Vector2(75, 27)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_r67kn")
+theme_override_font_sizes/font_size = 24
+text = "99+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="MAINMENU/HBoxContainer/MarginContainer/HBoxContainer/Button" to="." method="_on_button_pressed8"]
+[connection signal="pressed" from="MAINMENU/HBoxContainer/MarginContainer/HBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="MAINMENU/HBoxContainer/MarginContainer/HBoxContainer/Button" to="MAINMENU/HBoxContainer/MarginContainer/HBoxContainer/Button" method="_on_pressed"]
+[connection signal="pressed" from="MAINMENU/HBoxContainer/MarginContainer/HBoxContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="BAKERY/MarginContainer2/VBoxContainer/CenterContainer/apple/apple" to="BAKERY/MarginContainer2/VBoxContainer/CenterContainer/apple/apple" method="_on_pressed"]
+[connection signal="pressed" from="BAKERY/MarginContainer2/VBoxContainer/CenterContainer2/banana/banana" to="BAKERY/MarginContainer2/VBoxContainer/CenterContainer2/banana/banana" method="_on_pressed"]
+[connection signal="pressed" from="BAKERY/MarginContainer2/VBoxContainer/CenterContainer3/oranges/oranges" to="BAKERY/MarginContainer2/VBoxContainer/CenterContainer3/oranges/oranges" method="_on_pressed"]
+[connection signal="pressed" from="BAKERY/MarginContainer2/VBoxContainer/strawberries/strawberries" to="BAKERY/MarginContainer2/VBoxContainer/strawberries/strawberries" method="_on_pressed"]
+[connection signal="pressed" from="BAKERY/MarginContainer2/VBoxContainer/cherries/cherries" to="BAKERY/MarginContainer2/VBoxContainer/cherries/cherries" method="_on_pressed"]
+[connection signal="pressed" from="BAKERY/MarginContainer2/VBoxContainer/HBoxContainer/Button" to="BAKERY/MarginContainer2/VBoxContainer/HBoxContainer/Button" method="_on_pressed"]
+[connection signal="pressed" from="BAKERY/MarginContainer2/VBoxContainer/HBoxContainer/button" to="BAKERY/MarginContainer2/VBoxContainer/HBoxContainer/button" method="_on_pressed"]
+[connection signal="pressed" from="BAKERY/Button" to="." method="_on_button_pressed"]
