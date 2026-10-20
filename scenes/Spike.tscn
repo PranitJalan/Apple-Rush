@@ -29,7 +29,7 @@ animations = [{
 }]
 
 [node name="KILLZONE" unique_id=689715833 instance=ExtResource("1_uiy7f")]
-scale = Vector2(3, 3)
+scale = Vector2(2.3, 2.3)
 
 [node name="CollisionShape2D" parent="." index="0" unique_id=1878399748]
 position = Vector2(-0.5, 0.5)

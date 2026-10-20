@@ -40,7 +40,7 @@ func get_input():
 		jump = true
 func set_movement(delta):
 	if  is_on_floor():
-		velocity.y = 0
+		pass
 	else:
 		velocity.y += GRAVITY*delta
 	if jump and is_on_floor:
@@ -64,4 +64,4 @@ func _on_finish():
 		locked = false
 		position = EVENT.spawn_position
 func trampoline():
-	velocity.y -= 1000
+	velocity.y -= 440

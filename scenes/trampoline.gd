@@ -15,6 +15,6 @@ func lo():
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
-		if body.velocity.y > 0:
+	# if body.get_real_velocity().y > 0: 
 			animated_sprite_2d.play("jump")
 			EVENT._tram.emit()
