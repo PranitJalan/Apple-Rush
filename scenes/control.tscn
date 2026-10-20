@@ -693,7 +693,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_sej5b")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_ehb43")
 text = " BAKE "
 script = SubResource("GDScript_ednal")
-cost = 20
+cost = 7
 fruit = "apples"
 
 [node name="CenterContainer2" type="CenterContainer" parent="BAKERY/MarginContainer2/VBoxContainer" unique_id=1906431065]
@@ -738,7 +738,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_0hfu7")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_fd2iw")
 text = " BAKE "
 script = ExtResource("6_6pn8l")
-cost = 15
+cost = 5
 fruit = "bananas"
 
 [node name="CenterContainer3" type="CenterContainer" parent="BAKERY/MarginContainer2/VBoxContainer" unique_id=477189655]
@@ -783,7 +783,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_sej5b")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_sxeuk")
 text = " BAKE "
 script = SubResource("GDScript_nnsnw")
-cost = 10
+cost = 3
 fruit = "oranges"
 
 [node name="strawberries" type="HBoxContainer" parent="BAKERY/MarginContainer2/VBoxContainer" unique_id=124850481]
@@ -826,7 +826,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_sej5b")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_po8yf")
 text = " BAKE "
 script = SubResource("GDScript_7o2ue")
-cost = 6
+cost = 2
 fruit = "strawberries"
 
 [node name="cherries" type="HBoxContainer" parent="BAKERY/MarginContainer2/VBoxContainer" unique_id=1882822293]
@@ -869,7 +869,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_sej5b")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_qsysb")
 text = " BAKE "
 script = SubResource("GDScript_hl4in")
-cost = 2
+cost = 1
 fruit = "cherries"
 
 [node name="Label2" type="Label" parent="BAKERY/MarginContainer2/VBoxContainer" unique_id=1888417805]
@@ -1132,8 +1132,8 @@ text = "99+"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="pressed" from="MAINMENU/HBoxContainer/MarginContainer/HBoxContainer/Button" to="." method="_on_button_pressed8"]
 [connection signal="pressed" from="MAINMENU/HBoxContainer/MarginContainer/HBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="MAINMENU/HBoxContainer/MarginContainer/HBoxContainer/Button" to="." method="_on_button_pressed8"]
 [connection signal="pressed" from="MAINMENU/HBoxContainer/MarginContainer/HBoxContainer/Button" to="MAINMENU/HBoxContainer/MarginContainer/HBoxContainer/Button" method="_on_pressed"]
 [connection signal="pressed" from="MAINMENU/HBoxContainer/MarginContainer/HBoxContainer/Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="BAKERY/MarginContainer2/VBoxContainer/CenterContainer/apple/apple" to="BAKERY/MarginContainer2/VBoxContainer/CenterContainer/apple/apple" method="_on_pressed"]
