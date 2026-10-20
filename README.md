@@ -3,7 +3,7 @@
 The project is made in Godot using GDScript.   
 It was made over 15 hours by adding various scenes and nodes. The main UI is controlled by the control scene and the main gameplay by the level scene.
 Currently no executable is available, to play it you must go to
- Itch.io-                  
+ Itch.io-[Pie Warrior](https://salprokite.itch.io/pie-warrior)                  
 
  ### Setup
  To open the project and edit it you must - 
