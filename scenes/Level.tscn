@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cndbly0v7v606" path="res://scenes/Spike.tscn" id="4_4qegb"]
 [ext_resource type="PackedScene" uid="uid://baibdsoneswgc" path="res://scenes/Checkpoint.tscn" id="4_ax7ne"]
 [ext_resource type="PackedScene" uid="uid://c7qxyj7hp30j1" path="res://scenes/trampoline.tscn" id="5_04qyp"]
-[ext_resource type="Script" uid="uid://bsnbyo2gmtx7m" path="res://path_follow_2d.gd" id="5_rccsh"]
+[ext_resource type="Script" uid="uid://bsnbyo2gmtx7m" path="res://scenes/path_follow_2d.gd" id="5_rccsh"]
 [ext_resource type="PackedScene" uid="uid://bd8jndlsvkcij" path="res://scenes/killzone.tscn" id="6_ax7ne"]
 [ext_resource type="Texture2D" uid="uid://b6b48pq3o62hd" path="res://assets/Background/Blue.png" id="7_fws66"]
 [ext_resource type="PackedScene" uid="uid://ds4a32vpdnupm" path="res://scenes/Exit Button.tscn" id="7_hh0fu"]
@@ -15,7 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://bj6gix3b4y34w" path="res://scenes/Oranges.tscn" id="11_gips2"]
 [ext_resource type="PackedScene" uid="uid://l0f5e8baanep" path="res://scenes/Strawberries.tscn" id="12_wsd7d"]
 [ext_resource type="PackedScene" uid="uid://dynopt5j2kyg8" path="res://scenes/Cherries.tscn" id="13_iw3v5"]
-[ext_resource type="PackedScene" uid="uid://bw0om1prglf58" path="res://Start.tscn" id="13_m0xki"]
+[ext_resource type="PackedScene" uid="uid://bw0om1prglf58" path="res://scenes/Start.tscn" id="13_m0xki"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fws66"]
 texture = ExtResource("1_j7wrs")
