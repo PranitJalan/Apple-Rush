@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dx88j48ioml30"]
 
-[ext_resource type="Script" uid="uid://bsnbyo2gmtx7m" path="res://path_follow_2d.gd" id="1_ns8uk"]
-[ext_resource type="PackedScene" uid="uid://bd8jndlsvkcij" path="res://scenes/killzone.tscn" id="2_nqic3"]
+[ext_resource type="Script" path="res://path_follow_2d.gd" id="1_ns8uk"]
+[ext_resource type="PackedScene" uid="uid://bd8jndlsvkcij" path="res://scenes_and_scripts/killzone.tscn" id="2_nqic3"]
 [ext_resource type="Texture2D" uid="uid://ds8nuvu5kax" path="res://assets/Traps/Saw/On (38x38).png" id="3_30n6l"]
 
 [sub_resource type="Curve2D" id="Curve2D_f877d"]

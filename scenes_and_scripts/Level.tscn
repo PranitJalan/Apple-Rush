@@ -1,21 +1,22 @@
 [gd_scene format=4 uid="uid://daaupk12ky5w2"]
 
 [ext_resource type="Texture2D" uid="uid://dbrfik8hjs10b" path="res://assets/Terrain/Terrain 2(16x16).png" id="1_j7wrs"]
-[ext_resource type="PackedScene" uid="uid://c1y7j6cniairk" path="res://scenes/character_body_2d.tscn" id="2_4dvvg"]
-[ext_resource type="PackedScene" uid="uid://cndbly0v7v606" path="res://scenes/Spike.tscn" id="4_4qegb"]
-[ext_resource type="PackedScene" uid="uid://baibdsoneswgc" path="res://scenes/Checkpoint.tscn" id="4_ax7ne"]
-[ext_resource type="PackedScene" uid="uid://c7qxyj7hp30j1" path="res://scenes/trampoline.tscn" id="5_04qyp"]
-[ext_resource type="Script" uid="uid://bsnbyo2gmtx7m" path="res://scenes/path_follow_2d.gd" id="5_rccsh"]
-[ext_resource type="PackedScene" uid="uid://bd8jndlsvkcij" path="res://scenes/killzone.tscn" id="6_ax7ne"]
+[ext_resource type="PackedScene" uid="uid://c1y7j6cniairk" path="res://scenes_and_scripts/character_body_2d.tscn" id="2_4dvvg"]
+[ext_resource type="PackedScene" uid="uid://cndbly0v7v606" path="res://scenes_and_scripts/Spike.tscn" id="4_4qegb"]
+[ext_resource type="PackedScene" uid="uid://baibdsoneswgc" path="res://scenes_and_scripts/Checkpoint.tscn" id="4_ax7ne"]
+[ext_resource type="PackedScene" uid="uid://c7qxyj7hp30j1" path="res://scenes_and_scripts/trampoline.tscn" id="5_04qyp"]
+[ext_resource type="Script" uid="uid://bsnbyo2gmtx7m" path="res://scenes_and_scripts/path_follow_2d.gd" id="5_rccsh"]
+[ext_resource type="PackedScene" uid="uid://bd8jndlsvkcij" path="res://scenes_and_scripts/killzone.tscn" id="6_ax7ne"]
 [ext_resource type="Texture2D" uid="uid://b6b48pq3o62hd" path="res://assets/Background/Blue.png" id="7_fws66"]
-[ext_resource type="PackedScene" uid="uid://ds4a32vpdnupm" path="res://scenes/Exit Button.tscn" id="7_hh0fu"]
+[ext_resource type="PackedScene" uid="uid://ds4a32vpdnupm" path="res://scenes_and_scripts/Exit Button.tscn" id="7_hh0fu"]
 [ext_resource type="Texture2D" uid="uid://ds8nuvu5kax" path="res://assets/Traps/Saw/On (38x38).png" id="7_sv41r"]
-[ext_resource type="PackedScene" uid="uid://bm42kaiyfa252" path="res://scenes/Apples.tscn" id="9_opqd1"]
-[ext_resource type="PackedScene" uid="uid://bt7e1vm6oexmv" path="res://scenes/Bananas.tscn" id="10_xyj84"]
-[ext_resource type="PackedScene" uid="uid://bj6gix3b4y34w" path="res://scenes/Oranges.tscn" id="11_gips2"]
-[ext_resource type="PackedScene" uid="uid://l0f5e8baanep" path="res://scenes/Strawberries.tscn" id="12_wsd7d"]
-[ext_resource type="PackedScene" uid="uid://dynopt5j2kyg8" path="res://scenes/Cherries.tscn" id="13_iw3v5"]
-[ext_resource type="PackedScene" uid="uid://bw0om1prglf58" path="res://scenes/Start.tscn" id="13_m0xki"]
+[ext_resource type="PackedScene" uid="uid://bm42kaiyfa252" path="res://scenes_and_scripts/Apples.tscn" id="9_opqd1"]
+[ext_resource type="PackedScene" uid="uid://bt7e1vm6oexmv" path="res://scenes_and_scripts/Bananas.tscn" id="10_xyj84"]
+[ext_resource type="PackedScene" uid="uid://bj6gix3b4y34w" path="res://scenes_and_scripts/Oranges.tscn" id="11_gips2"]
+[ext_resource type="PackedScene" uid="uid://l0f5e8baanep" path="res://scenes_and_scripts/Strawberries.tscn" id="12_wsd7d"]
+[ext_resource type="PackedScene" uid="uid://dynopt5j2kyg8" path="res://scenes_and_scripts/Cherries.tscn" id="13_iw3v5"]
+[ext_resource type="PackedScene" uid="uid://bw0om1prglf58" path="res://scenes_and_scripts/Start.tscn" id="13_m0xki"]
+[ext_resource type="FontFile" uid="uid://c253tsfxn4ssc" path="res://assets/Menu/Text/Text (Black) (8x10).png" id="15_vawbn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fws66"]
 texture = ExtResource("1_j7wrs")
@@ -702,8 +703,14 @@ position = Vector2(1291, -25)
 position = Vector2(39, 48)
 
 [node name="Label" type="Label" parent="World Parts" unique_id=530436210]
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 160.0
+offset_top = 50.0
+offset_right = 232.0
+offset_bottom = 128.0
+theme_override_fonts/font = ExtResource("15_vawbn")
+theme_override_font_sizes/font_size = 7
+text = "JUMP BETWEEN TWO TRAMPOLINES TO BE LAUNCHED HIGHER"
+autowrap_mode = 3
 
 [node name="Player" parent="." unique_id=1810582521 instance=ExtResource("2_4dvvg")]
 position = Vector2(41.000015, 62)

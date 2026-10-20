@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bj6gix3b4y34w"]
 
-[ext_resource type="PackedScene" uid="uid://dy0hggfc0hx42" path="res://scenes/collectables.tscn" id="1_rcxdn"]
+[ext_resource type="PackedScene" uid="uid://dy0hggfc0hx42" path="res://scenes_and_scripts/collectables.tscn" id="1_rcxdn"]
 [ext_resource type="Texture2D" uid="uid://bjvt211ak28qs" path="res://assets/Items/Fruits/Collected.png" id="2_e2811"]
 [ext_resource type="Texture2D" uid="uid://dwpvd7bqgjjhx" path="res://assets/Items/Fruits/Orange.png" id="3_aw4ic"]
 

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dy0hggfc0hx42"]
 
-[ext_resource type="Script" uid="uid://bjqy08wkxrn6" path="res://scenes/collectables.gd" id="1_xf80n"]
+[ext_resource type="Script" uid="uid://bjqy08wkxrn6" path="res://scenes_and_scripts/collectables.gd" id="1_xf80n"]
 [ext_resource type="Texture2D" uid="uid://bjvt211ak28qs" path="res://assets/Items/Fruits/Collected.png" id="2_n6gme"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xxofk"]

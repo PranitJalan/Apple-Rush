@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c1y7j6cniairk"]
 
-[ext_resource type="Script" uid="uid://cilwo4nkk8gw4" path="res://scenes/player_movement.gd" id="1_g2brh"]
+[ext_resource type="Script" uid="uid://cilwo4nkk8gw4" path="res://scenes_and_scripts/player_movement.gd" id="1_g2brh"]
 [ext_resource type="Texture2D" uid="uid://d11klrakq2d6c" path="res://assets/Main Characters/Pink Man/Idle (32x32).png" id="2_g2brh"]
 [ext_resource type="Texture2D" uid="uid://im01bnonkin4" path="res://assets/Main Characters/Pink Man/Hit (32x32).png" id="2_rhr3r"]
 [ext_resource type="Texture2D" uid="uid://bcspn5iwntqmv" path="res://assets/Main Characters/Pink Man/Run (32x32).png" id="3_dn4c7"]
